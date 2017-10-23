@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>AR test</title>
+  <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+  <script src="AR.js-master/aframe/build/aframe-ar.js"></script>
+
+  <script src="https://rawgit.com/donmccurdy/aframe-extras/v2.1.1/dist/aframe-extras.loaders.min.js"></script>
+</head>
+
+<body style="margin: 0px; overflow: hidden;">
+  <a-scene stats embedded artoolkit='sourceType: webcam;'>
+    <!--<a-video src="airbending.mp4"></a-video>-->
+    <a-box src="img/logo.jpg" position='0 1 0' material='opacity: 1;' color="#1db15b">
+    </a-box>
+    <a-box color="#1db15b" depth="0.2" height="2" width="0.2" position='-0.6 1.5 0' rotation="0 0 0">
+      <a-animation attribute="rotation" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+    </a-box>
+    <a-box color="#1db15b" depth="0.2" height="2" width="0.2" position='0.6 1.5 0' rotation="0 0 0">
+      <a-animation attribute="rotation" to="0 1 0" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+    </a-box>
+    <!--<a-cylinder position="0 1.25 0" radius="1" height="4" rotation="-90 0 0" color="#FFC65D"></a-cylinder>-->
+    <a-sphere position="0 1 -1" src="img/dave.jpg" radius=".5" rotation="0 270 -270" color="#cee3a7">
+      <a-animation attribute="position" to="0 1 -1.5" direction="alternate" dur="2000" repeat="indefinite"></a-animation>
+    </a-sphere>
+    <a-text value="Hi! Im D1g1D4v3. How can I help you?" color="#BBB" position="0.5 1 -1.5 scale="1 1 1" rotation="-90 0 0"></a-text>
+      <!--<a-sphere position="1 1.25 0 " radius="1.25 " color="#cee3a7 "></a-sphere>
+      <a-sphere position="-1 1.25 0 " radius="1.25 " color="#cee3a7 "></a-sphere>-->
+      <a-marker-camera preset="hiro" position=" " rotation=" " scale=" " visible=" " material=" " artoolkitmarker=" " camera=" "></a-marker-camera>
+      </a-scene>
+  </body>
+</html>
